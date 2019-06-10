@@ -43,7 +43,7 @@ class SimpleWpMembership {
         add_action('init', array(&$this, 'init_hook'));
         add_action('wp_loaded', array(&$this, 'handle_wp_loaded_tasks'));
 
-        add_filter('the_title', array(&$this, 'filter_title'), 20, 1);
+        // add_filter('the_title', array(&$this, 'filter_title'), 20, 1);
         add_filter('the_content', array(&$this, 'filter_content'), 20, 1);
         add_filter('widget_text', 'do_shortcode');
         add_filter('show_admin_bar', array(&$this, 'hide_adminbar'));
